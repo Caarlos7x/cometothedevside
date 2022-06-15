@@ -88,6 +88,10 @@ section header h2 {
   color: var(--headline);
 }
 
+#me {
+  color: grey;
+}
+
 section header h1 {
   font-size: 3.4rem;
   color: white;
@@ -185,7 +189,7 @@ nav {
 nav .wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 nav.scroll {
@@ -443,6 +447,11 @@ body.menu-expanded button path {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  color: white;
+}
+
+#github, #linkedin {
+  text-decoration: none;
   color: white;
 }
 
