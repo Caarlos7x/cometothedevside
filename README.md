@@ -1,12 +1,12 @@
-# RAZOR SHAVE
+# COME TO THE DEV SIDE
 
-<img height="300px" src="https://i.imgur.com/7EAJqQo.png">
+<img height="300px" src="https://i.imgur.com/rspQO2F.png">
 
 Página para salvar perfis favoritos do Github.
 
 Projeto original do Figma: https://www.figma.com/file/5Aq5i0LRnIXN0DooT3Wiv2/DoctorCare-Community
 
-Deploy:https://caarlos7x.github.io/razorshave/Index.html
+Deploy:https://caarlos7x.github.io/cometothedevside/index.html
 
 ## 🚀 Começando -
 
