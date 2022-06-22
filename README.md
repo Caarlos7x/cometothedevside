@@ -34,7 +34,6 @@ Versão única
 
 ## ✒️ Autores
 
-- **EXPLORER Rocketseat**
 
 - **Carlos Augusto** - _Trabalho Inicial_ - [Carlos Augusto](https://www.linkedin.com/in/carlos-augusto-dantas-frei-51502ba9/)
 
