@@ -2,8 +2,11 @@
 
 <img height="300px" src="https://i.imgur.com/rspQO2F.png">
 
+Página para salvar perfis favoritos do Github.
 
-Deploy: www.devside.com.br
+Projeto original do Figma: https://www.figma.com/file/5Aq5i0LRnIXN0DooT3Wiv2/DoctorCare-Community
+
+Deploy:https://caarlos7x.github.io/cometothedevside/index.html
 
 ## 🚀 Começando -
 
@@ -31,9 +34,13 @@ Versão única
 
 ## ✒️ Autores
 
+- **EXPLORER Rocketseat**
 
 - **Carlos Augusto** - _Trabalho Inicial_ - [Carlos Augusto](https://www.linkedin.com/in/carlos-augusto-dantas-frei-51502ba9/)
 
+## 🎁 Agradecimentos
+
+- Gratidão à equipe Rocketseat
 
 ---
 
