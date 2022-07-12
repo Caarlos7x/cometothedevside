@@ -19,7 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
       rel="stylesheet" -->
   </head>
-  <body>
+  <body onscroll="disableScrolling()" 
+  onmousewheel="enableScrolling()" 
+   onclick="enableScrolling()"
+    onmousemove="enableScrolling()">
     <nav id="navigation">
       <div class="wrapper">
        
@@ -33,6 +36,8 @@
             <li><a onclick="closeMenu()" href="#services">Portfólio</a></li>
             <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
           </ul>
+
+          <a class="button" onclick="closeMenu()" href="#contact">Contato</a>
 
           <ul class="social-links">
             <li>
@@ -181,9 +186,9 @@
       <div class="wrapper">
         <div class="col-a">
           <header>
-            <h4>come to the dev side 👽🖖</h4>
-            <h1 class="dev"><span> < DE</span>SENVOL<span>V</span>EDOR<br>
-              <span>FRONT</span>-<span>END /></span></h1>
+            <h4>Desenvolvedor front-end</h4>
+            <h1 class="dev"> <span><</span>CARLOS<br>
+              &nbsp&nbsp&nbspAUGUSTO <span>/></span></h1>
           </header>
 
           <div class="content">
@@ -191,13 +196,14 @@
               Não é falta de café, nem tequila. É meu código que não compila.<br>
               <i>- Eu faço programas.</i>
             </p>
+            <a class="button1" href="https://docs.google.com/uc?export=download&id=1luQLhEfwjkdDlxKUvJCWTaeaPSXQeaNJ">download cv</a>
           </div>
         </div>
 
-        <div class="col-b">
+        <div class="col-b1">
           <img
-            src="./assets/moon.png"
-            alt="imagem da lua"
+            src=""
+            alt=""
           />
           
         </div>
@@ -214,8 +220,8 @@
           </div>
 
           <div class="stat">
-            <h3>+20</h3>
-            <p>Projetos práticos</p>
+            <h3>24</h3>
+            <p>Repositórios no Github</p>
           </div>
         </div>
       </div>
@@ -225,7 +231,7 @@
       <div class="wrapper">
         <header>
           <h4>PORTFÓLIO</h4>
-          <h2>Alguns trabalhos desenvolvidos</h2>
+          <h2>Alguns projetos desenvolvidos</h2>
         </header>
 
         <div class="content">
@@ -491,7 +497,7 @@
 
               Fiz a minha transição de carreira no começo de 2022 decidindo voltar para a área de tecnologia. Minhas últimas experiências de mercado foram em dois unicórnios, voltados às áreas de tecnologia, infraestrutura e segurança. Nesses últimos ciclos que vivi pude me desenvolver profissionalmente com o ritmo de cada empresa aprendendo no dia-a-dia soft skills onde se adquire trabalhando em startups grandes.<br/><br/>
               
-              Por conta da pandemia, foi um baita desafio não só pra mim como para muitas pessoas se mantererm no mercado de trabalho. Uma das dificuldades ainda presente é conseguir voltar para o mercado de trabalho, então decidi focar na área de desenvolvimento e voltar com força total para a área de <strong>tech</strong>. Venho participando de bootcamps e criando novos projetos através de estudos na <strong>Rocketseat 🚀</strong>. Estarei compartilhando com vocês meus avanços e novos projetos conforme vão ficando prontos.<br/><br/>
+              Por conta da pandemia, foi um baita desafio não só pra mim como para muitas pessoas se manterem no mercado de trabalho. Uma das dificuldades ainda presente é conseguir voltar para o mercado de trabalho, então decidi focar na área de desenvolvimento e voltar com força total para a área de <strong>tech</strong>. Venho participando de bootcamps e criando novos projetos através de estudos na <strong>Rocketseat 🚀</strong>. Estarei compartilhando com vocês meus avanços e novos projetos conforme vão ficando prontos.<br/><br/>
               
               Atualmente, estou desenvolvendo alguns projetos práticos de layout voltados para web.
             </p>
@@ -512,10 +518,20 @@
         <div class="col-a">
           <header>
             <h2>Meus contatos</h2>
+            <p class="cont">
+              Curtiu? É só clicar no botão abaixo e mandar uma mensagem. Responderei o mais rápido possível.
+            </p>
           </header>
 
           <div class="content">
             <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="50" height="50"
+                viewBox="0 0 50 50"
+                style=" fill:#000000;"><path d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 13 16 L 37 16 C 37.18 16 37.349766 16.020312 37.509766 16.070312 L 27.679688 25.890625 C 26.199688 27.370625 23.790547 27.370625 22.310547 25.890625 L 12.490234 16.070312 C 12.650234 16.020312 12.82 16 13 16 z M 11.070312 17.490234 L 18.589844 25 L 11.070312 32.509766 C 11.020312 32.349766 11 32.18 11 32 L 11 18 C 11 17.82 11.020312 17.650234 11.070312 17.490234 z M 38.929688 17.490234 C 38.979688 17.650234 39 17.82 39 18 L 39 32 C 39 32.18 38.979687 32.349766 38.929688 32.509766 L 31.400391 25 L 38.929688 17.490234 z M 20 26.410156 L 20.890625 27.310547 C 22.020625 28.440547 23.510234 29 24.990234 29 C 26.480234 29 27.959844 28.440547 29.089844 27.310547 L 29.990234 26.410156 L 37.509766 33.929688 C 37.349766 33.979688 37.18 34 37 34 L 13 34 C 12.82 34 12.650234 33.979687 12.490234 33.929688 L 20 26.410156 z"></path></svg>
+                <a id="email" href="mailto:caarlos.frei@gmail.com">Enviar e-mail</a>
+              </li>
               <li>
                 <svg xmlns="http://www.w3.org/2000/svg" width="47" height="46" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
 

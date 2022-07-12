@@ -12,6 +12,16 @@ function onScroll() {
   activateMenuAtCurrentSection(contact)
 }
 
+function disableScrolling() {
+  setTimeout(function() {
+      document.body.style.overflow = 'hidden';
+  }, 2000);
+}
+
+function enableScrolling() {
+  document.body.style.overflow = '';
+}
+
 function activateMenuAtCurrentSection(section) {
   const targetLine = scrollY + innerHeight / 2
 

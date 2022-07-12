@@ -37,7 +37,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 10px;               /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
@@ -45,7 +45,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: hsla(210, 9%, 31%, 0.3);    /* color of the scroll thumb */
+  background-color: hsla(0, 0%, 100%, 0.838);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid transparent;  /* creates padding around scroll thumb */
 }
@@ -58,7 +58,7 @@ body {
 
   overflow: overlay;
 
-  background-color: rgb(4, 4, 4);
+  background-color: #07111A;
 }
 
 
@@ -80,7 +80,7 @@ img {
 #profile{
   border-radius: 50%;
   border: 2px solid white;
-  filter: drop-shadow(0 0 15px aqua);
+  filter: drop-shadow(0 0 15px #1DB175);
 }
 
 section {
@@ -92,7 +92,7 @@ section header h4 {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
-  color: aqua;
+  color: #1DB175;
 
   text-transform: uppercase;
 
@@ -103,12 +103,12 @@ section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
 
-  color: var(--headline);
+  color: white;
 }
 
 #me {
   color: white;
-  filter: drop-shadow(0 0 15px aqua);
+  filter: drop-shadow(0 0 15px #1DB175);
   position: relative;
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
@@ -170,10 +170,10 @@ section header h2 {
 
 
 section header h1 {
-  font-size: 3.6rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 5.4rem;
+  color: white;
   font-weight: 800;
-  line-height: 130%;
+  line-height: 90%;
   margin-bottom: 2.4rem;
 }
 
@@ -190,14 +190,12 @@ section header h1 {
 }
 
 section header span {
-  color: black;
+  color: #07111A;
   text-shadow:
-  -1px -1px 0 aqua,
-  1px -1px 0 aqua,
-  -1px 1px 0 aqua, 
-  1px 1px 0 aqua;
-
-  animation: animate 1.5s linear infinite;
+  -1px -1px 0 #1DB175,
+  1px -1px 0 #1DB175,
+  -1px 1px 0 #1DB175, 
+  1px 1px 0 #1DB175;
 }
 
 h1:hover {
@@ -209,14 +207,14 @@ section .content p {
   font-size: 1.6rem;
   line-height: 150%;
 
-  color: var(--paragraph);
+  color: white;
 }
 
-.button {
-  background: var(--primary-color);
+.button1 {
+  background: transparent;
 
-  border: none;
-  border-radius: 4rem;
+  border: 1px solid #1DB175;
+  border-radius: 1rem;
 
   margin-bottom: 6rem;
 
@@ -224,7 +222,7 @@ section .content p {
   width: fit-content;
 
   color: white;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -238,8 +236,9 @@ section .content p {
   transition: background 200ms;
 }
 
-.button:hover {
-  background-color: var(--brand-dark);
+.button1:hover {
+  background-color: #F94D20;
+  border: 1px solid white;
 }
 
 .social-links {
@@ -251,12 +250,12 @@ section .content p {
 
 /* custom colors */
 #services .card circle {
-  fill: var(--brand-light);
+  fill: white;
 }
 
 #navigation .logo path[fill*='#00856F'],
 #backToTopButton circle {
-  fill: var(--primary-color);
+  fill: #1DB175;
 }
 
 button.open-menu path[stroke*='#00856F'],
@@ -293,7 +292,7 @@ nav .wrapper {
 }
 
 nav.scroll {
-  background: rgb(25, 25, 25);
+  background: rgba(25, 25, 25, 50%);
 }
 
 nav button {
@@ -413,7 +412,7 @@ body.menu-expanded button path {
   content: '';
   width: 100%;
   height: calc(120% + var(--nav-height));
-  background-color: black;
+  background-color: #07111A;
   display: block;
 
   position: absolute;
@@ -447,8 +446,8 @@ body.menu-expanded button path {
   padding-block: 4rem;
   margin-inline: auto;
 
-  background-color: rgb(94, 94, 94);
-  border: 1px solid var(--brand-light);
+  background-color: transparent;
+  border: 1px solid #1DB175;
   border-radius: 0.6rem;
 
   display: flex;
@@ -459,7 +458,7 @@ body.menu-expanded button path {
 
 #home .stat h3 {
   font-size: 4.8rem;
-  color:aqua;
+  color:white;
   line-height: 130%;
 
   margin-bottom: 0.4rem;
@@ -467,7 +466,7 @@ body.menu-expanded button path {
 
 #home .stat p {
   margin: 0;
-  color: aqua;
+  color: white;
   font-size: 1.6rem;
   line-height: 150%;
 }
@@ -489,7 +488,7 @@ body.menu-expanded button path {
   padding: 2.4rem;
   text-align: left;
 
-  background: rgb(25, 25, 25);
+  background: transparent;
 
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
@@ -497,7 +496,7 @@ body.menu-expanded button path {
 
 #services .card h3 {
   margin-block: 1.6rem;
-  color: aqua;
+  color: #1DB175;
 }
 
 #services img {
@@ -523,7 +522,7 @@ body.menu-expanded button path {
 }
 
 .JS:hover, .css3:hover, .html5:hover {
-  color: aqua;
+  color: #1DB175;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -588,7 +587,7 @@ body.menu-expanded button path {
 #contact header h2 {
   margin-bottom: 3.2rem;
   color: white;
-  filter: drop-shadow(0 0 15px aqua);
+  filter: drop-shadow(0 0 15px #1DB175);
 }
 
 #contact ul {
@@ -609,6 +608,15 @@ body.menu-expanded button path {
 .content path {
   fill: white;
 }
+.content .JS path {
+  fill: yellow;
+}
+.content .css3 path {
+  fill: blue;
+}
+.content .html5 path {
+  fill: rgb(255, 72, 0);
+}
 
 #github, #linkedin {
   text-decoration: none;
@@ -617,7 +625,7 @@ body.menu-expanded button path {
 
 /*=== FOOTER =================================*/
 footer {
-  background-color: var(--primary-color);
+  border-top: 1px solid ;
   padding-block: 6rem;
 
   text-align: left;
@@ -651,7 +659,6 @@ footer path {
 .insta:hover path, 
 .git:hover path, 
 .linke:hover path {
-fill: aqua;
 
 animation: shake 0.5s;
 animation-iteration-count: infinite;
@@ -756,10 +763,10 @@ footer .social-links {
     align-items: center;
     padding: 1rem 2.4rem;
 
-    border: 1px solid var(--primary-color);
-    border-radius: 4rem;
+    background-color: #F94D20;
+    border-radius: 1rem;
 
-    color: var(--primary-color);
+    color: white;
 
     font-weight: 700;
     font-size: 1.4rem;
@@ -768,19 +775,20 @@ footer .social-links {
   }
 
   nav#navigation .menu a.button:hover {
-    background-color: var(--primary-color);
-    border: none;
+    background-color: transparent;
+    border: 1px solid #1DB175;
     color: white;
   }
 
   nav#navigation.scroll .menu ul li a {
-    color: var(--brand-light-2);
+    color: white;
     opacity: 0.6;
   }
 
   nav#navigation.scroll .menu a.button {
     border-color: white;
-    color: grey;
+    color: white;
+    opacity: 60%;
   }
 
   nav#navigation .menu li a {
@@ -797,7 +805,7 @@ footer .social-links {
     content: '';
     width: 0%;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: white;
 
     position: relative;
     bottom: -2rem;
@@ -825,7 +833,7 @@ footer .social-links {
 
   nav#navigation.scroll .menu a.button.active,
   nav#navigation.scroll .menu a.button:hover {
-    background-color: var(--primary-color);
+
     filter: brightness(1.3);
     border: none;
   }
@@ -852,8 +860,10 @@ footer .social-links {
   }
 
   #home h1 {
-    font-size: 5.2rem;
+    font-size: 8.2rem;
+    font-weight: 800;
   }
+  
 
   #home .content p {
     font-size: 1.8rem;
@@ -868,7 +878,7 @@ footer .social-links {
   }
 
   #home .stats .stat + .stat {
-    border-left: 1px solid var(--primary-color);
+    border-left: 1px solid #1DB175;
   }
 
   #home .stats .stat {
@@ -883,10 +893,34 @@ footer .social-links {
     width: 42rem;
   }
 
+  .col-b1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 537px;
+    background: linear-gradient(to left, #07111A, transparent);
+    z-index: 1000;
+  }
+
+  .col-b1 {
+    background-image: url(./assets/IMG_3409.png);
+    position: relative; 
+    height: 51vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    opacity: 0.2;
+  }
+
   /*=== SERVICES =================================*/
   #services h2 {
     width: 62rem;
     margin-inline: auto;
+    text-transform: uppercase;
+    font-size: 2.5rem;
   }
 
   #services .cards {
@@ -926,7 +960,13 @@ footer .social-links {
     width: 40.4rem;
   }
 
-  #github, #linkedin {
+  #contact p {
+    width: 60%;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  #github, #linkedin, #email {
     text-decoration: none;
     color: white;
   }
