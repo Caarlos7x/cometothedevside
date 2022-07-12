@@ -1,12 +1,8 @@
 # COME TO THE DEV SIDE
 
-<img height="300px" src="hhttps://i.imgur.com/F8LcT3M.png">
+<img height="300px" src="https://i.imgur.com/F8LcT3M.png">
 
-Página para salvar perfis favoritos do Github.
-
-Projeto original do Figma: https://www.figma.com/file/5Aq5i0LRnIXN0DooT3Wiv2/DoctorCare-Community
-
-Deploy:https://caarlos7x.github.io/cometothedevside/index.html
+Deploy: www.devside.com.br
 
 ## 🚀 Começando -
 
