@@ -1,6 +1,6 @@
 # COME TO THE DEV SIDE
 
-<img height="300px" src="https://i.imgur.com/rspQO2F.png">
+<img height="300px" src="hhttps://i.imgur.com/F8LcT3M.png">
 
 Página para salvar perfis favoritos do Github.
 
@@ -30,7 +30,7 @@ HTML | CSS | JS
 
 ## 📌 Versão
 
-Versão única
+Versão 2.0
 
 ## ✒️ Autores
 
