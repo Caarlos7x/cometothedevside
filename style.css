@@ -457,12 +457,25 @@ body.menu-expanded button path {
 }
 
 #home .stat h3 {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
   padding: 1rem;
   color:white;
   line-height: 130%;
-
   margin-bottom: 0.4rem;
+}
+
+.stat #html5:hover {
+  color: #ED4C2D;
+}
+.stat #css3:hover {
+  color: #156CAD;
+}
+.stat #javas:hover {
+  color: #F2C025;
+}
+.stat #react:hover {
+  color: #01CDF2;
 }
 
 #home .stat p {
