@@ -1,6 +1,6 @@
 # COME TO THE DEV SIDE
 
-<img height="300px" src="https://i.imgur.com/F8LcT3M.png">
+<img height="300px" src="https://i.imgur.com/mPvrGFS.png">
 
 Deploy: www.devside.com.br
 
@@ -20,13 +20,13 @@ Não carece de instalação
 
 ## 🛠️ Construído com
 
-<img align="center" alt="HTML" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/html-1.svg"><img align="center" alt="CSS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/css-3.svg"><img align="center" alt="CSS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">
+<img align="center" alt="HTML" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/html-1.svg"><img align="center" alt="CSS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/css-3.svg"><img align="center" alt="HTML" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/react-1.svg"><img align="center" alt="CSS" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg">
 
 HTML | CSS | JS
 
 ## 📌 Versão
 
-Versão 2.0
+Versão 2.1
 
 ## ✒️ Autores
 
