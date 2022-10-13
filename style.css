@@ -466,13 +466,13 @@ body.menu-expanded button path {
 }
 
 .stat #html5:hover {
-  color: #ED4C2D;
+  color: #e34c26;
 }
 .stat #css3:hover {
-  color: #156CAD;
+  color: #264de4;
 }
 .stat #javas:hover {
-  color: #F2C025;
+  color: #f7df1e;
 }
 .stat #react:hover {
   color: #01CDF2;
@@ -623,13 +623,13 @@ body.menu-expanded button path {
   fill: white;
 }
 .content .JS path {
-  fill: yellow;
+  fill: #f7df1e;
 }
 .content .css3 path {
-  fill: blue;
+  fill: #264de4;
 }
 .content .html5 path {
-  fill: rgb(255, 72, 0);
+  fill: #e34c26;
 }
 
 #github, #linkedin {
@@ -918,7 +918,7 @@ footer .social-links {
   }
 
   .col-b1 {
-    background-image: url(./assets/IMG_3409.png);
+    background-image: url(./assets/IMG_3410_jpg.jpg);
     position: relative; 
     height: 51vh;
     width: 100%;
