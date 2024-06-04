@@ -101,8 +101,94 @@ ScrollReveal({
   #home img, 
   #home .stats, 
   #services,
+  #experience,
   #services header,
   #services .card
   #about, 
   #about header, 
   #about .content`)
+
+  async function fetchRepoCount() {
+    const username = 'caarlos7x'; // Substitua pelo seu nome de usuário do GitHub
+
+    try {
+      console.log(`Fetching data for user: ${username}`);
+      const response = await fetch(`https://api.github.com/users/${username}`);
+      console.log(`Response status: ${response.status}`);
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      const data = await response.json();
+      console.log('Data received:', data);
+      const repoCount = data.public_repos;
+      
+      document.getElementById('repoCount').innerText = repoCount;
+    } catch (error) {
+      console.error('Erro ao buscar a contagem de repositórios:', error);
+      document.getElementById('repoCount').innerText = 'Erro ao buscar a contagem de repositórios.';
+    }
+  }
+
+  fetchRepoCount();
+
+
+  async function fetchLatestRepos() {
+    const username = 'caarlos7x'; // Substitua pelo seu nome de usuário do GitHub
+    const token = ''; // Substitua pelo seu token de acesso do GitHub
+
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}/repos?sort=created&per_page=6`, {
+        headers: {
+          'Authorization': `token ${token}`
+        }
+      });
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      const repos = await response.json();
+
+      const reposContainer = document.getElementById('reposContainer');
+      repos.forEach(repo => {
+        const repoDiv = document.createElement('div');
+        repoDiv.className = 'repo';
+        repoDiv.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || 'Sem descrição'}</p>
+          <a href="${repo.html_url}" target="_blank">Ver Repositório</a>
+        `;
+        reposContainer.appendChild(repoDiv);
+      });
+    } catch (error) {
+      console.error('Erro ao buscar os repositórios:', error);
+      const reposContainer = document.getElementById('reposContainer');
+      reposContainer.innerHTML = '<p>Erro ao buscar os repositórios.</p>';
+    }
+  }
+
+  // Chame a função ao carregar a página
+  document.addEventListener('DOMContentLoaded', fetchLatestRepos);
+
+  fetchLatestRepos();
+
+  function calculateAge(birthDate) {
+    const today = new Date();
+    const birthDateObj = new Date(birthDate);
+    let age = today.getFullYear() - birthDateObj.getFullYear();
+    const monthDifference = today.getMonth() - birthDateObj.getMonth();
+
+    // Verifica se o aniversário já aconteceu este ano
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDateObj.getDate())) {
+      age--;
+    }
+
+    return age;
+  }
+
+  function updateAge() {
+    const birthDate = '1991-06-22'; // Data de aniversário no formato YYYY-MM-DD
+    const age = calculateAge(birthDate);
+    document.getElementById('ageCounter').innerText = age;
+  }
+
+  // Chama a função para atualizar a idade ao carregar a página
+  updateAge();

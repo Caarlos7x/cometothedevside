@@ -26,8 +26,6 @@
 html {
   /* chrome://flags/#smooth-scrolling */
   scroll-behavior: smooth;
- 
-  
 }
 
 html,
@@ -80,7 +78,7 @@ img {
 #profile{
   border-radius: 50%;
   border: 2px solid white;
-  filter: drop-shadow(0 0 15px #1DB175);
+  filter: drop-shadow(0 0 15px #9AE5F7);
 }
 
 section {
@@ -92,23 +90,26 @@ section header h4 {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
-  color: #1DB175;
+  color: #9AE5F7;
 
   text-transform: uppercase;
 
   margin-bottom: 1.6rem;
+
+  display: none;
 }
 
 section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
-
+  font-weight: 800;
   color: white;
+  filter: drop-shadow(0 0 15px #9AE5F7);
 }
 
 #me {
   color: white;
-  filter: drop-shadow(0 0 15px #1DB175);
+  filter: drop-shadow(0 0 15px #9AE5F7);
   position: relative;
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
@@ -166,9 +167,6 @@ section header h2 {
   }
 }
 
-
-
-
 section header h1 {
   font-size: 5.4rem;
   color: white;
@@ -192,10 +190,10 @@ section header h1 {
 section header span {
   color: #07111A;
   text-shadow:
-  -1px -1px 0 #1DB175,
-  1px -1px 0 #1DB175,
-  -1px 1px 0 #1DB175, 
-  1px 1px 0 #1DB175;
+  -1px -1px 0 #9AE5F7,
+  1px -1px 0 #9AE5F7,
+  -1px 1px 0 #9AE5F7, 
+  1px 1px 0 #9AE5F7;
 }
 
 h1:hover {
@@ -210,17 +208,18 @@ section .content p {
   color: white;
 }
 
+.btn-curriculo {
+  display: flex;
+  justify-content: center;
+}
+
 .button1 {
   background: transparent;
-
-  border: 1px solid #1DB175;
+  border: 1px solid #9AE5F7;
   border-radius: 1rem;
-
   margin-bottom: 6rem;
-
   padding: 1.6rem 3.2rem;
   width: fit-content;
-
   color: white;
   font-size: 1rem;
   font-weight: 700;
@@ -230,15 +229,15 @@ section .content p {
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-
   text-decoration: none;
 
   transition: background 200ms;
 }
 
 .button1:hover {
-  background-color: #F94D20;
+  background-color: #9AE5F7;
   border: 1px solid white;
+  filter: drop-shadow(0 0 15px #9AE5F7);
 }
 
 .social-links {
@@ -253,14 +252,14 @@ section .content p {
   fill: white;
 }
 
-#navigation .logo path[fill*='#00856F'],
+#navigation .logo path[fill*='#9AE5F7'],
 #backToTopButton circle {
-  fill: #1DB175;
+  fill: #9AE5F7;
 }
 
-button.open-menu path[stroke*='#00856F'],
+button.open-menu path[stroke*='#9AE5F7'],
 #contact li path {
-  stroke: var(--primary-color);
+  stroke: #9AE5F7;
 }
 
 body.menu-expanded #navigation .logo path,
@@ -268,7 +267,7 @@ body.menu-expanded #navigation .logo path,
   fill: white;
 }
 
-#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+#navigation.scroll button.open-menu path[stroke*='#9AE5F7'] {
   stroke: white;
 }
 
@@ -402,6 +401,31 @@ body.menu-expanded button path {
   stroke: white;
 }
 
+
+
+/** -- link-tree-homepage */
+
+.card {
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+}
+
+.link-tree {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.link-tree img {
+  padding: 20px;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+}
+
+.card-text {
+  padding: 20px;
+  text-align: justify;
+}
+
 /*=== #HOME =================================*/
 #home {
   padding-block: 0;
@@ -410,7 +434,7 @@ body.menu-expanded button path {
 
 #home::before {
   content: '';
-  width: 100%;
+  /* width: 100%; */
   height: calc(120% + var(--nav-height));
   background-color: #07111A;
   display: block;
@@ -441,13 +465,25 @@ body.menu-expanded button path {
   object-position: 0 2rem;
 }
 
+.col-b1 {
+  background-image: url(./assets/moon.png);
+  position: relative; 
+  height: 51vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  opacity: 0.2;
+}
+
 #home .stats {
   width: 100%;
   padding-block: 4rem;
   margin-inline: auto;
 
   background-color: transparent;
-  border: 1px solid #1DB175;
+  border: 1px solid #9AE5F7;
   border-radius: 0.6rem;
 
   display: flex;
@@ -488,6 +524,27 @@ body.menu-expanded button path {
 
 
 /*=== SERVICES =================================*/
+.repos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.repo {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  color: white;
+}
+.repo p {
+  margin-bottom: 30px;
+}
+.repo a {
+  text-decoration: none;
+  color: #9AE5F7;
+}
+
+
 #services header h2 {
   margin-bottom: 6rem;
 }
@@ -510,7 +567,7 @@ body.menu-expanded button path {
 
 #services .card h3 {
   margin-block: 1.6rem;
-  color: #1DB175;
+  color: #9AE5F7;
 }
 
 #services img {
@@ -536,7 +593,7 @@ body.menu-expanded button path {
 }
 
 .JS:hover, .css3:hover, .html5:hover {
-  color: #1DB175;
+  color: #9AE5F7;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -580,11 +637,14 @@ body.menu-expanded button path {
 /*=== ABOUT =================================*/
 #about {
   text-align: left;
-  background-color: rgb(22, 22, 22);
+  background-color: #000000;
 }
 
 #about header h2 {
   margin-bottom: 2.4rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  font-size: 4.5rem;
 }
 
 #about .content p {
@@ -593,15 +653,65 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
+
+/** --- homepage-experience */
+
+.experience-title h1 {
+  margin-bottom: 40px;
+  font-size: 38px;
+  font-weight: 800;
+  color:  white;
+  filter: drop-shadow(0 0 15px #9AE5F7);
+}
+.card-exp {
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #9AE5F7;
+  color: white;
+
+  transition: 0.3s ease-in-out;
+
+  &&:hover{
+    border: 2px solid #b8eefc;
+    filter: drop-shadow(0 0 15px #9AE5F7);
+  }
+}
+
+.card-exp-img {
+  margin-top: 30px;
+}
+
+.card-body {
+  text-align: left;
+}
+
+.card-title {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.card-text-exp {
+  margin-top: 10px;
+  text-align: left;
+}
+
+
 /*=== CONTACT =================================*/
 #contact {
   text-align: left;
+  background-color: #31363F;
+}
+
+.may-the-force {
+  font-size: 22px;
+  filter: drop-shadow(0 0 15px #9AE5F7);
 }
 
 #contact header h2 {
   margin-bottom: 3.2rem;
   color: white;
-  filter: drop-shadow(0 0 15px #1DB175);
+  filter: drop-shadow(0 0 15px #9AE5F7);
 }
 
 #contact ul {
@@ -641,10 +751,13 @@ body.menu-expanded button path {
 footer {
   border-top: 1px solid ;
   padding-block: 6rem;
-
-  text-align: left;
+  text-align: center;
 
   color: white;
+}
+
+.footer-main {
+  margin: 0 auto;
 }
 
 footer .logo {
@@ -664,8 +777,6 @@ footer .logo path {
 footer p {
   color: var(--brand-beige);
   line-height: 2;
-
-  margin-bottom: 3.2rem;
 }
 footer path {
   fill: white;
@@ -777,10 +888,10 @@ footer .social-links {
     align-items: center;
     padding: 1rem 2.4rem;
 
-    background-color: #F94D20;
+    background-color: #9AE5F7;
     border-radius: 1rem;
 
-    color: white;
+    color: rgb(65, 65, 65);
 
     font-weight: 700;
     font-size: 1.4rem;
@@ -790,7 +901,7 @@ footer .social-links {
 
   nav#navigation .menu a.button:hover {
     background-color: transparent;
-    border: 1px solid #1DB175;
+    border: 1px solid #9AE5F7;
     color: white;
   }
 
@@ -877,6 +988,11 @@ footer .social-links {
     font-size: 8.2rem;
     font-weight: 800;
   }
+
+  .btn-curriculo {
+    display: flex;
+    justify-content: left;
+  }
   
 
   #home .content p {
@@ -892,7 +1008,7 @@ footer .social-links {
   }
 
   #home .stats .stat + .stat {
-    border-left: 1px solid #1DB175;
+    border-left: 1px solid #9AE5F7;
   }
 
   #home .stats .stat {
@@ -918,7 +1034,7 @@ footer .social-links {
   }
 
   .col-b1 {
-    background-image: url(./assets/IMG_3410_jpg.jpg);
+    background-image: url(./assets/moon.png);
     position: relative; 
     height: 51vh;
     width: 100%;
@@ -961,6 +1077,18 @@ footer .social-links {
 
   #about .content p {
     margin-bottom: 0;
+  }
+
+  .col-a header h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: #9AE5F7;
+  
+    text-transform: uppercase;
+  
+    margin-bottom: 1.6rem;
   }
 
   /*=== CONTACT =================================*/
