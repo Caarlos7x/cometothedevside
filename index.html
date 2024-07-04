@@ -1,852 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com" /> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./img/curly-brackets-svgrepo-com.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Augusto │ Dev</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/React-icon.svg.png" type="image/x-icon">
-    <title>Carlos Augusto | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  
-    <script 
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-      crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <script 
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./src/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
 
- 
-  </head>
-  <body>
-    <!-- <div id="particles-js">
+<body>
+
+    <div id="loading-screen">
+        <span class="loader_wrapper">
+            <svg viewBox="-50 -50 700 700" class="loader" xmlns="http://www.w3.org/2000/svg"
+                xmlns:svg="http://www.w3.org/2000/svg">
+                <g>
+                    <title>Layer 1</title>
+                    <g id="l1">
+                        <path fill="#000"
+                            d="m299.99999,0c-165.59998,0 -299.99998,134.40004 -299.99998,300.00004c0,165.6 134.39998,300.00004 299.99998,300c165.6,0 300.00002,-134.39996 300.00002,-300c0,-165.60002 -134.40002,-300.00004 -300.00002,-300.00004zm-14.15816,24.87248c0.1688,-0.00856 0.34134,0.00824 0.5102,0l1.27552,20.34438c-17.30332,0.82496 -34.14468,3.34834 -50.38266,7.46174l5.03828,19.8342c-42.62194,10.79592 -80.5854,33.2414 -110.33164,63.7755l-14.6046,-14.2857c-11.87822,12.18596 -22.49774,25.57174 -31.76018,39.92346l-17.09184,-11.28828c46.68098,-72.1773 126.19538,-121.13988 217.34692,-125.7653zm27.80612,0c91.36348,4.46928 171.08974,53.45432 217.85716,125.7653l-17.09184,11.28828c-9.24162,-14.31558 -19.85138,-27.69924 -31.69644,-39.8597l-14.60458,14.22194c-29.75088,-30.5504 -67.7586,-52.97584 -110.3954,-63.7755l5.03826,-19.8342c-16.23798,-4.1134 -33.07932,-6.63678 -50.38266,-7.46174l1.2755,-20.34438zm-13.64796,89.92346c8.67348,-0.01988 17.34698,0.5102 24.48982,1.53064l-11.16072,92.85714c23.45946,3.42092 44.02786,15.6988 58.22704,33.35458l74.48978,-55.86736c9.0481,11.2718 19.30572,28.95476 24.68114,42.34696l-85.58674,36.60712c4.3019,10.62846 6.69644,22.21 6.69644,34.37502c0,11.7196 -2.17876,22.9187 -6.18624,33.22704l84.8852,36.28828c-5.23758,13.47174 -15.3882,31.12314 -24.29846,42.47448l-73.9796,-55.35714c-14.1803,18.0591 -34.98424,30.66998 -58.73726,34.18366l10.96942,91.32654c-14.28572,2.19998 -34.69388,2.1684 -48.9796,0.12756l10.96938,-91.4541c-23.77016,-3.51622 -44.55626,-16.16742 -58.73724,-34.24744l-73.78826,55.35714c-9.04808,-11.2718 -19.3057,-28.95476 -24.68114,-42.34694l85.07654,-36.41582c-3.99384,-10.29306 -6.18622,-21.46466 -6.18622,-33.16326c0,-12.18602 2.38038,-23.79538 6.69642,-34.43878l-85.3954,-36.4796c5.2376,-13.47174 15.3882,-31.12314 24.29848,-42.4745l74.6811,55.93114c14.19918,-17.65578 34.76758,-29.93366 58.22706,-33.35458l-11.16072,-92.72962c7.14286,-1.09998 15.81632,-1.63826 24.48978,-1.65816zm-245.15304,59.4388l18.36734,9.05612c-7.74674,15.01834 -14.08054,30.87462 -18.75,47.44896l19.64286,5.54848c-5.71048,20.26526 -8.80102,41.62812 -8.80102,63.71174c0,22.10504 3.07982,43.49278 8.80102,63.7755l-19.64286,5.54848c4.66624,16.54766 11.01278,32.38996 18.75,47.3852l-18.36734,9.05612c-19.39818,-37.71134 -30.35714,-80.46448 -30.35714,-125.7653c0,-45.30084 10.95896,-88.05396 30.35714,-125.7653zm490.30612,0c19.39818,37.71134 30.3571,80.46446 30.3571,125.7653c0,45.30082 -10.95892,88.05396 -30.3571,125.7653l-18.36736,-9.05612c7.7405,-14.9997 14.08224,-30.83214 18.75002,-47.3852l-19.64286,-5.54848c5.72118,-20.28272 8.80102,-41.67046 8.80102,-63.7755c0,-22.08362 -3.09052,-43.44648 -8.80102,-63.71174l19.64286,-5.54848c-4.66816,-16.5697 -11.00646,-32.43422 -18.75002,-47.44896l18.36736,-9.05612zm-459.56632,263.8393c9.26598,14.35144 19.88144,27.73692 31.76018,39.92346l14.6046,-14.28572c29.74624,30.53408 67.7097,52.9796 110.33164,63.77552l-5.03828,19.83416c16.23798,4.11338 33.07934,6.6368 50.38266,7.46176l-1.27552,20.34438c-91.36344,-4.46932 -171.08972,-53.45436 -217.85712,-125.7653l17.09184,-11.28826zm428.8903,0l17.02806,11.28826c-46.76742,72.31094 -126.49368,121.29598 -217.85716,125.7653l-1.2755,-20.34438c17.30334,-0.82496 34.14468,-3.34838 50.38266,-7.46176l-5.03826,-19.83416c42.6368,-10.7997 80.64452,-33.22514 110.3954,-63.77552l14.60458,14.22194c11.85988,-12.17568 22.5073,-25.52476 31.76022,-39.85968z" />
+                    </g>
+                </g>
+            </svg>
+            <span class="text">Loading</span>
+        </span>
+    </div>
+
+    <!-- <div id="loading-screen">
+        <div id="loading-bar"></div>
+        <div id="loading-text">0%</div>
     </div> -->
 
-    <nav id="navigation">
-      <div class="wrapper">
-       
-        </a>
-
-        <div class="menu">
-          <ul>
-            <li>
-              <a onclick="closeMenu()" href="#home">Início</a>
-            </li>
-            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
-            <li><a onclick="closeMenu()" href="#services">Portfólio</a></li>
-          </ul>
-
-          <a class="button" onclick="closeMenu()" href="#contact">Contato</a>
-
-          <ul class="social-links">
-            <li>
-              <a target="_blank" href="https://instagram.com/caarlos7x"
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.5 6.49997H17.51"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://facebook.com/caarlos7x">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://youtube.com">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <button
-          aria-expanded="false"
-          aria-label="Abrir menu"
-          onclick="openMenu()"
-          class="open-menu"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 20H30"
-              stroke="#9AE5F7"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10 12H30"
-              stroke="#9AE5F7"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M18 28L30 28"
-              stroke="#9AE5F7"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-
-        <button
-          aria-expanded="true"
-          aria-label="Fechar menu"
-          onclick="closeMenu()"
-          class="close-menu"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30 10L10 30M10 10L30 30"
-              stroke="#FFFAF1"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-
-      </div>
-    </nav>
-
-    <section id="home">
-
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h4>HELLO THERE !</h4>
-            <h1 class="dev"> <span><</span>SOFTWARE<br>
-              &nbsp&nbsp&nbspENGINEER <span>/></span></h1>
-          </header>
-
-          <div class="content">
-            <p class="type-out">
-              Café, música, animais e código.<br>
-              <i></i>
-            </p>
-            <div class="btn-curriculo">
-              <a class="button1" 
-                href="https://docs.google.com/uc?export=download&id=1luQLhEfwjkdDlxKUvJCWTaeaPSXQeaNJ">
-                download cv
-              </a>
-
+    <div class="container">
+        <div class="content">
+            <div class="widget1">
+                <div class="info-user">
+                    <div class="img-user">
+                        <img src="https://avatars.githubusercontent.com/u/95699480?v=4" alt="user">
+                    </div>
+                    <div class="name-user">
+                        <h1>Carlos Augusto</h1>
+                        <span>Desenvolvedor Web</span>
+                    </div>
+                </div>
+                <div class="info-icon">
+                    <img src="./src/img/jedi-order-svgrepo-com.svg" alt="icon">
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-b1">
-          <img
-            src=""
-            alt=""
-          />
-          
-        </div>
-
-      </div>
-      
-    </section>
-
-    <section id="about">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h4>Hello there! <br>meu nome é</h4>
-            <h2 id="me">Carlos Augusto</h2>
-          </header>
-
-          <div class="content">
-            <p>
-              Tenho <span id="ageCounter"></span> anos e sou um entusiasta da tecnologia, música e amante dos animais de estimação.
-              <br><br>
-              Atualmente, atuo como <strong>Engenheiro de Software</strong>, desenvolvendo soluções inovadoras e acessíveis.
-
-              Minha paixão pela programação me levou a explorar diversas tecnologias, e atualmente estou focado em desenvolvimento 
-              web e mobile. <br><br>
-              
-              Tenho experiência em criar portais de cliente e dashboards utilizando <strong>React.js</strong> e 
-              <strong>Ionic</strong>, aproveitando ao máximo as funcionalidades da plataforma JumpCloud.
-              <br><br>
-              No desenvolvimento de sites comerciais, sigo as melhores práticas do mercado, utilizando ferramentas modernas como 
-              <strong>Bootstrap</strong> para garantir interfaces responsivas e intuitivas.
-              <br><br>
-              Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento e contribuir para projetos 
-              inovadores. Se você está procurando um profissional dedicado, apaixonado e pronto para enfrentar desafios, estou 
-              à disposição para colaborar no seu próximo projeto.
-              
-              
-              
-              Hoje, estou desenvolvendo alguns projetos práticos de layout voltados para web.
-            </p>
-          </div>
-
-          
-        </div>
-
-        <div class="col-b">
-          <img id="profile"
-            src="./assets/IMG_9786.jpg"
-            alt="Foto de perfil do Carlos Augusto"
-          />
-        </div>
-      </div>
-
-      
-    </section>
-
-    <section id="experience">
-      <div class="experience-title">
-        <h1>Experiência</h1>
-      </div>
-      <div class="container mx-auto">
-        <div class="card mb-3 card-exp">
-          <div class="row g-0">
-            <div class="col-md-4 card-exp-img">
-              <img src="./assets/macsolution_consultoria_logo.jpeg" class="img-fluid rounded-start" alt="...">
+            <div class="widget2">
+                <div class="hard-skills">
+                    <span class="destaque">Tecnologias</span>
+                    <div class="skills-icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-bootstrap"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-node"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-wix"></i>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Software Engenieer</h5>
-                <h5 class="card-subtitle">MacSolution</h5>
-                <h5 class="card-subtitle">2023 - Hoje</h5>
-                <p class="card-text-exp">
-                  Desenvolvedor front end do portal Data Ranger onde clientes 
-                  possam ter acesso a relatórios e dashboard completo extraídos 
-                  da plataforma JumpCloud elevando o nível para a melhor gestão 
-                  de identidades e dispositivos.
-                  Desenvolvedor front end do Seed Store, uma loja de aplicativos 
-                  para plataforma macOS self-service, na qual eles podem, de 
-                  maneira autônoma, baixar e manter atualizadas todas as ferramentas 
-                  e aplicações previamente aprovadas e essenciais para atividades 
-                  profissionais, sem a necessidade de possuir privilégios de administrador. 
+            <div class="widget3">
+                <a href="tel:11950826771" target="_blank" class="tread">
+                    <div class="text-tread">
+                        <h1>Precisa de um website para o seu negócio?</h1>
+                        <p>
+                            Vamos conversar! Seja para criar 
+                            uma presença online impactante ou para melhorar seu 
+                            site atual.
+                        </p>
+                    </div>
+                </a>
+                <div class="redes-sociais">
+                    <a class="box-social github" href="https://github.com/Caarlos7x"><i class="fab fa-github"></i></a>
+                    <a class="box-social linkedin" href="https://www.linkedin.com/in/carlosaugustofrei"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="box-social instagram" href="https://www.instagram.com/caarlos7x"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="box-social google" href="mailto:caarlos.frei@gmail.com"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+            <div class="widget4">
+                <a href="./devside/" class="meu-site">
+                    <img src="./src/img/web-black-icon.png" alt="web">
+                    <h1>Entrar no site</h1>
+                </a>
+            </div>
+
+            <div class="widget5">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./src/img/portfolio-1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/img/portfolio-2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/img/portfolio-3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/img/portfolio-4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/img/portfolio-5.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/img/portfolio-6.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./src/img/portfolio-7.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="widget6">
+                <p>
+                    Powered by Carlos Augusto. Code is licensed under 
+                    <a href="https://github.com/digitalmalayali/linkhub-jekyll-theme/blob/main/LICENSE.txt">MIT</a>.
+                    © 2024 <strong>Come to the Dev Side</strong>.
                 </p>
-              </div>
             </div>
-          </div>
         </div>
+    </div>
 
-        <div class="card mb-3 card-exp">
-          <div class="row g-0">
-            <div class="col-md-4 card-exp-img">
-              <img src="./assets/equals-logo-jpg.jpeg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Analista de Infraestrutura DevOps</h5>
-                <h5 class="card-subtitle">Equals - Gestão Financeira Inteligente</h5>
-                <h5 class="card-subtitle">2022 - 2023</h5>
-                <p class="card-text-exp">
-                  Experiência trabalhando como Suporte DevOps e Analista de Infraestrutura. 
-                  Atuei na implementação, monitoramento e manutenção de sistemas complexos, 
-                  garantindo alta disponibilidade e desempenho. Minhas habilidades incluem 
-                  automação de processos, gerenciamento de servidores e infraestrutura em nuvem, 
-                  sempre focado em soluções eficientes e seguras.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <script src="./src/js/animationLoading.js"></script>
+</body>
 
-        <div class="card mb-3 card-exp">
-          <div class="row g-0">
-            <div class="col-md-4 card-exp-img">
-              <img src="./assets/loftbr_logo.jpeg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Analista de Infraestrutura TI</h5>
-                <h5 class="card-subtitle">Loft - Mercado Imobiliário</h5>
-                <h5 class="card-subtitle">2019 - 2022</h5>
-                <p class="card-text-exp">
-                  Atuei na automação de salas de videoconferência e no gerenciamento 
-                  de dados em infraestrutura com foco na experiência do usuário. 
-                  Desenvolvi e implementei soluções que 
-                  melhoraram a eficiência e a confiabilidade dos sistemas de comunicação 
-                  e armazenamento, garantindo uma operação sem interrupções e segura.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-3 card-exp">
-          <div class="row g-0">
-            <div class="col-md-4 card-exp-img">
-              <img src="./assets/99app_logo.jpeg" class="img-fluid rounded-start" alt="logo da 99 app">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Analista de Tecnologia da Informação Sênior</h5>
-                <h5 class="card-subtitle">99 app - Mobilidade Urbana</h5>
-                <h5 class="card-subtitle">2017 - 2019</h5>
-                <p class="card-text-exp">
-                  Contribui com o projeto de audio e vídeo a implementar na área de 
-                  eventos internos, abrangendo 
-                  soluções de áudio, vídeo e videoconferência para salas de reunião. 
-                  Também prestei suporte à infraestrutura, assegurando que todos os 
-                  colaboradores internos tivessem acesso a sistemas de comunicação 
-                  eficientes e de alta qualidade.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-    <section id="services">
-      <div class="wrapper">
-        <!-- <header>
-          <h4>PORTFÓLIO</h4>
-          <h2>Alguns projetos desenvolvidos</h2>
-        </header>
-        
-
-        <div class="repos-container" id="reposContainer">
-
-        </div> -->
-
-        <!-- <div class="content">
-          <div class="cards">
-            <div class="card">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-                <path
-                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-                  stroke="#00856F"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h3>Rocket Sect</h3>
-              <a href="#">
-              <img id="rocket" src="assets/rocketsec.png" alt=""></a>
-              <p>
-                Página desenvolvida para um projeto de segurança da informação. Desenvolvida através de HTML e CSS.
-              </p><br>
-              <hr />
-              <ul class="tech">
-                <li class="html5">
-                  <svg 
-                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z">
-                  </path>
-                </li>
-                <li class="css3">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"></path></svg>
-                </li>
-                </ul>
-              </div>
-
-            <div class="card">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-                <path
-                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-                  stroke="#00856F"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h3>Razor Shave</h3>
-              <a href="https://github.com/Caarlos7x/razorshave" target="_blank">
-              <img id="razor" src="assets/razor-shave.png" alt="foto de uma página na internet de salão de cabelereiro"></a>
-              <p>
-                Este foi meu primeiro projeto realizado e desenvolvido em HTML, CSS e JS.
-              </p><br>
-              <hr />
-              <ul class="tech">
-                <li class="html5">
-                  <svg 
-                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z">
-                  </path>
-                </li>
-                <li class="css3">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"></path></svg>
-                </li>
-                <li class="JS">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M32 32v448h448V32zm240 348c0 43.61-25.76 64.87-63.05 64.87-33.68 0-53.23-17.44-63.15-38.49l34.28-20.75c6.61 11.73 11.63 21.65 26.06 21.65 12 0 21.86-5.41 21.86-26.46V240h44zm99.35 63.87c-39.09 0-64.35-17.64-76.68-42L329 382c9 14.74 20.75 24.56 41.5 24.56 17.44 0 27.57-7.72 27.57-19.75 0-14.43-10.43-19.54-29.68-28l-10.52-4.52c-30.38-12.92-50.52-29.16-50.52-63.45 0-31.57 24.05-54.63 61.64-54.63 26.77 0 46 8.32 59.85 32.68L396 290c-7.22-12.93-15-18-27.06-18-12.33 0-20.15 7.82-20.15 18 0 12.63 7.82 17.74 25.86 25.56l10.52 4.51c35.79 15.34 55.94 31 55.94 66.16.01 37.9-29.76 57.64-69.76 57.64z"></path></svg>
-                </li>
-                </ul>
-              </div>
-            
-
-            <div class="card">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-                <path
-                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-                  stroke="#00856F"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h3>Móveis Custom</h3>
-              <a href="https://github.com/Caarlos7x/projectimoveiscustom/tree/main target="_blank"">
-              <img id="moveiscustom" src="assets/moveis-custom.png" alt="página com móveis planejados"></a>
-              <p>
-                Página desenvolvida para um projeto voltado à móveis planejados. Desenvolvida através de HTML e CSS.
-              </p><br>
-              <hr />
-              <ul class="tech">
-                <li class="html5">
-                  <svg 
-                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z">
-                  </path>
-                </li>
-                <li class="css3">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"></path></svg>
-                </li>
-                </ul>
-              </div>
-            
-
-            <div class="card">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-                <path
-                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-                  stroke="#00856F"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h3>Treine Me</h3>
-              <a href="https://github.com/Caarlos7x/projecttreineme/tree/main target="_blank"">
-              <img id="treine-me" src="assets/treine-me.png" alt=""></a>
-              <p>
-                Página desenvolvida para um projeto de bem-estar e saúde. Desenvolvida através de HTML, CSS e JavaScript.
-              </p><br><br>
-              <hr />
-              <ul class="tech">
-                <li class="html5">
-                  <svg 
-                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z">
-                  </path>
-                </li>
-                <li class="css3">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"></path></svg>
-                </li>
-                <li class="JS">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M32 32v448h448V32zm240 348c0 43.61-25.76 64.87-63.05 64.87-33.68 0-53.23-17.44-63.15-38.49l34.28-20.75c6.61 11.73 11.63 21.65 26.06 21.65 12 0 21.86-5.41 21.86-26.46V240h44zm99.35 63.87c-39.09 0-64.35-17.64-76.68-42L329 382c9 14.74 20.75 24.56 41.5 24.56 17.44 0 27.57-7.72 27.57-19.75 0-14.43-10.43-19.54-29.68-28l-10.52-4.52c-30.38-12.92-50.52-29.16-50.52-63.45 0-31.57 24.05-54.63 61.64-54.63 26.77 0 46 8.32 59.85 32.68L396 290c-7.22-12.93-15-18-27.06-18-12.33 0-20.15 7.82-20.15 18 0 12.63 7.82 17.74 25.86 25.56l10.52 4.51c35.79 15.34 55.94 31 55.94 66.16.01 37.9-29.76 57.64-69.76 57.64z"></path></svg>
-                </li>
-                </ul>
-              </div>
-            
-
-            <div class="card">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-                <path
-                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-                  stroke="#00856F"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h3>Porsche Design</h3>
-              <a href="https://github.com/Caarlos7x/project05gridporsche/tree/main" target="_blank">
-              <img id="porsche" src="assets/porsche-design.png" alt="página de carros de luxo"></a>
-              <p>
-                Página desenvolvida para um projeto para concessionária de carros de luxo. Desenvolvida através de HTML e CSS com transições.
-              </p><br>
-              <hr />
-              <ul class="tech">
-                <li class="html5">
-                  <svg 
-                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z">
-                  </path>
-                </li>
-                <li class="css3">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"></path></svg>
-                </li>
-                </ul>
-              </div>
-            
-
-            <div class="card">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
-                <path
-                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
-                  stroke="#00856F"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-
-              <h3>My Forms</h3>
-              <a href="https://github.com/Caarlos7x/myforms/tree/main" target="_blank">
-              <img id="myforms" src="assets/myforms.png" alt=""></a>
-              <p>
-                Página desenvolvida para um projeto de captação de feedback. Este formulário foi Desenvolvida através de HTML e CSS.
-              </p><br>
-              <hr />
-              <ul class="tech">
-                <li class="html5">
-                  <svg 
-                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z">
-                  </path>
-                </li>
-                <li class="css3">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"></path></svg>
-                </li>
-                <li class="JS">
-                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" focusable="false" class="chakra-icon css-146izfq" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M32 32v448h448V32zm240 348c0 43.61-25.76 64.87-63.05 64.87-33.68 0-53.23-17.44-63.15-38.49l34.28-20.75c6.61 11.73 11.63 21.65 26.06 21.65 12 0 21.86-5.41 21.86-26.46V240h44zm99.35 63.87c-39.09 0-64.35-17.64-76.68-42L329 382c9 14.74 20.75 24.56 41.5 24.56 17.44 0 27.57-7.72 27.57-19.75 0-14.43-10.43-19.54-29.68-28l-10.52-4.52c-30.38-12.92-50.52-29.16-50.52-63.45 0-31.57 24.05-54.63 61.64-54.63 26.77 0 46 8.32 59.85 32.68L396 290c-7.22-12.93-15-18-27.06-18-12.33 0-20.15 7.82-20.15 18 0 12.63 7.82 17.74 25.86 25.56l10.52 4.51c35.79 15.34 55.94 31 55.94 66.16.01 37.9-29.76 57.64-69.76 57.64z"></path></svg>
-                </li>
-                </ul>
-              </div>
-            
-          </div>
-        </div> -->
-
-      </div>
-    </section>
-
-    
-
-    <section id="contact">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h2>Meus contatos</h2>
-            <p class="cont">
-              Fique à vontade para entrar em contato para colaborações ou oportunidades.
-              <br><br>
-              <h1 class="may-the-force">Que a força esteja com você!</h1>
-            </p>
-          </header>
-
-          <div class="content">
-            <ul>
-              <li>
-                <i class="bi bi-at" style="font-size: 4rem;"></i>
-                <a id="email" href="mailto:caarlos.frei@gmail.com">Enviar e-mail</a>
-              </li>
-              <li>
-                <i class="bi bi-linkedin" style="font-size: 4rem;"></i>
-                <a id="linkedin" href="https://www.linkedin.com/in/carlos-augusto-dantas-frei-51502ba9/">LinkedIn</a> 
-              </li>
-              <li>
-                <i class="bi bi-github bi-2xl" style="font-size: 4rem;"></i>
-
-              <a id="github" href="https://github.com/Caarlos7x">Carlos Augusto</a> 
-            </a>
-          </div>
-        </div>
-
-        <div class="col-b">
-          <img
-            src="./assets/kenobi.gif"
-            alt="Desenho Obi-Wan Kenobi"
-          />
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-main">
-        <div class="footer">
-          <p>
-            ©2022 carlos Augusto | Software Engenieer.
-            Todos os direitos reservados. <br />
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <a id="backToTopButton" href="#home">
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="20" cy="20" r="20" fill="#00856F" />
-        <path
-          d="M20 27V13"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M13 20L20 13L27 20"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </a>
-
-    <!-- ScrollReaveal Lib -->
-    <script src="particles.min.js"></script>
-    <script>
-        particlesJS(
-            {
-                "particles": {
-                    "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                    },
-                    "color": {
-                    "value": "#0053a5"
-                    },
-                    "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                    },
-                    "opacity": {
-                    "value": 0.2,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                    },
-                    "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 0,
-                        "size_min": 0,
-                        "sync": false
-                    }
-                    },
-                    "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#aeafff",
-                    "opacity": 0.4,
-                    "width": 1
-                    },
-                    "move": {
-                    "enable": true,
-                    "speed": 1.5735393620871414,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                    },
-                    "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                        "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                    }
-                },
-                "retina_detect": true
-                }
-        )
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init(
-            {
-                duration: 1200,
-            }
-        );
-    </script>
-    <script type ="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./main.js"></script>
-  </body>
 </html>
